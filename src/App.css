@@ -1,4 +1,5 @@
 .App {
+  color: #333333;
   text-align: center;
 }
 
@@ -26,21 +27,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-.App-button {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: transparent;
-  padding: 5px 10px;
-  margin-top: 30px;
-  color: #fff;
-  font-size: 14px;
-}
-
-.App-button:hover {
-  background-color: #61dafb;
-  border-color: #282c34;
 }
 
 @keyframes App-logo-spin {

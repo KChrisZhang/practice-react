@@ -1,11 +1,19 @@
 import React from 'react'
-import logo from './logo.svg'
+// import logo from './logo.svg'
 import './App.css'
 
+import Header from './components/Header'
+import Button from './components/Button'
+
 function App() {
+  const count = sessionStorage.getItem('count') || 0
+  sessionStorage.setItem('count', Number(count) + 1)
+  console.log('[app]', sessionStorage.getItem('count'))
+
   return (
     <div className="App">
-      <header className="App-header">
+      <Header></Header>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,8 +26,8 @@ function App() {
         >
           Learn React
         </a>
-        <button className="App-button">按钮</button>
-      </header>
+      </header> */}
+      <Button></Button>
     </div>
   )
 }
