@@ -1,9 +1,7 @@
 import React from 'react'
-// import logo from './logo.svg'
-import './App.css'
-
-import Header from './components/Header'
-import Button from './components/Button'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './views/Home'
+import User from './views/User'
 
 function App() {
   const count = sessionStorage.getItem('count') || 0
@@ -11,24 +9,27 @@ function App() {
   console.log('[app]', sessionStorage.getItem('count'))
 
   return (
-    <div className="App">
-      <Header></Header>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <Button></Button>
-    </div>
+    <Router>
+      <div>
+        {/* <ul>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/user">User</Link>
+          </li>
+        </ul> */}
+
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/user">
+            <User></User>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   )
 }
 
