@@ -17,10 +17,10 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <Home></Home>
+            <Home title="首页123"></Home>
           </Route>
           <Route path="/user">
-            <User></User>
+            <User title="用户456"></User>
           </Route>
         </Switch>
       </div>
