@@ -1,7 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Header from './components/Header'
 import Home from './views/Home'
 import User from './views/User'
+import './App.css'
 
 function App() {
   const count = sessionStorage.getItem('count') || 0
@@ -11,14 +13,7 @@ function App() {
   return (
     <Router>
       <div>
-        {/* <ul>
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/user">User</Link>
-          </li>
-        </ul> */}
+        <Header></Header>
 
         <Switch>
           <Route exact path="/">
