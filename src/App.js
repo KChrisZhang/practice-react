@@ -1,9 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import './App.css'
+
 import Header from './components/Header'
 import Home from './views/Home'
 import User from './views/User'
-import './App.css'
+import Login from './views/Login'
 
 function App() {
   const count = sessionStorage.getItem('count') || 0
@@ -21,6 +23,9 @@ function App() {
           </Route>
           <Route path="/user">
             <User title="用户456"></User>
+          </Route>
+          <Route path="/login">
+            <Login title="登录"></Login>
           </Route>
         </Switch>
       </div>

@@ -5,9 +5,9 @@ export default class Button extends React.Component {
   constructor(props) {
     super(props)
     this.state = { status: false }
-    this.handleClick = this.handleClick.bind(this)
+    // this.handleClick = this.handleClick.bind(this, this.state.status)
   }
-  handleClick() {
+  handleClick(args) {
     const val = !this.state.status
     this.setState({
       status: val,
@@ -15,7 +15,7 @@ export default class Button extends React.Component {
   }
   render() {
     return (
-      <button className="button" onClick={this.handleClick}>
+      <button className="button" onClick={this.handleClick.bind(this, this.state.status)}>
         {this.state.status ? 'ON' : 'OFF'}
       </button>
     )

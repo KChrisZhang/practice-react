@@ -17,6 +17,12 @@ export default function Header(props) {
       >
         User
       </Link>
+      <Link
+        className={`header-link ${pathname === '/login' ? 'header-link-active' : ''}`}
+        to="/login"
+      >
+        Login
+      </Link>
     </header>
   )
 }
