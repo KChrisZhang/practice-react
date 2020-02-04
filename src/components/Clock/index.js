@@ -1,4 +1,5 @@
 import React from 'react'
+import './index.scss'
 
 export default class Clock extends React.Component {
   constructor(props) {

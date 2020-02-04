@@ -1,7 +1,9 @@
 import React from 'react'
+import './index.scss'
+
 import LoginButton from '../../components/LoginButton'
 import LogoutButton from '../../components/LogoutButton'
-import './index.scss'
+import WarningMessage from '../../components/WarningMessage'
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -28,6 +30,11 @@ export default class Login extends React.Component {
       button = <LoginButton onClick={this.handleLoginClick}></LoginButton>
     }
 
-    return <div className="Login">{button}</div>
+    return (
+      <div className="Login">
+        {button}
+        <WarningMessage message={this.state.isLogin ? '登录成功' : ''}></WarningMessage>
+      </div>
+    )
   }
 }
