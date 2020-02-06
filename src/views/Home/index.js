@@ -4,6 +4,7 @@ import './index.scss'
 
 import Clock from '../../components/Clock'
 import Button from '../../components/Button'
+import BarChart from '../../components/BarChart'
 
 export default function Home(props) {
   let location = useLocation()
@@ -14,6 +15,8 @@ export default function Home(props) {
       <Clock></Clock>
       <h3>{props['title']}</h3>
       <Button></Button>
+
+      <BarChart></BarChart>
     </div>
   )
 }
