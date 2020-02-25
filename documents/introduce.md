@@ -1,4 +1,4 @@
-1 创建项目
+1 Creating the project
 
 ```javascript
 create-react-app practive-react
@@ -6,7 +6,7 @@ create-react-app practive-react
 
 
 
-2  添加路由
+2  Adding the router
 
 ```javascript
 npm i react-router-dom
@@ -14,7 +14,7 @@ npm i react-router-dom
 
 
 
-3 按照文档写组件demo
+3 Demo introduction
 
 - state
 - render
