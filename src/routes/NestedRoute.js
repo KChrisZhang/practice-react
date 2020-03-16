@@ -50,7 +50,6 @@ function About() {
 
 function Topics() {
   let match = useRouteMatch()
-  console.log(789, match)
 
   return (
     <div>
@@ -60,7 +59,7 @@ function Topics() {
           <Link to={`${match.url}/components`}>Components</Link>
         </li>
         <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
+          <link to={`${match.url}/props-v-state`}>Props v. State</link>
         </li>
       </ul>
 
@@ -77,7 +76,6 @@ function Topics() {
 }
 
 function Topic() {
-  console.log(123)
   let { topicId } = useParams()
   return <h3>Requested topic ID: {topicId}</h3>
 }
