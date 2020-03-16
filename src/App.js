@@ -50,7 +50,6 @@ function About() {
 
 function Topics() {
   let match = useRouteMatch()
-  console.log(789, match)
 
   return (
     <div>
@@ -77,7 +76,6 @@ function Topics() {
 }
 
 function Topic() {
-  console.log(123)
   let { topicId } = useParams()
   return <h3>Requested topic ID: {topicId}</h3>
 }
