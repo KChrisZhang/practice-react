@@ -1,3 +1,7 @@
+Notes.
+
+
+
 1 Creating the project
 
 ```javascript
@@ -43,9 +47,13 @@ Let's recap what happens when you edit an input.
 
 
 
-Router
-
 react-router-dom
+
+
+
+Primary Component
+
+Router: BrowserRouter, HashRouter
 
 1. BrowserRouter, special server configuration
 2. HashRouter, stores the current location in the hash portion of the URL
@@ -54,6 +62,12 @@ Route Matchers: Switch and Route
 
 1. Switch, when a <Switch> is rendered, it searches through its children <Route> elements to find one whose path matches the current URL, When it finds one, it renders that <Route> and ignores all others. This means that you should put <Route> with more specific (typically longer) paths before less-specific ones. If no <Route> matches, the <Switch> renders nothing(null).
 2. If none of the previous routes render anything, this route acts as a fallback. Important: A route with path="/" will always match the URL because all URLs begin with a /. So that's why we put this one last of all.
+
+Navigation: Link, NavLink, Redirect
+
+Hook
+
+
 
 
 
