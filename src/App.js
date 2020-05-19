@@ -6,6 +6,7 @@ import Home from './views/Home'
 import User from './views/User'
 import Login from './views/Login'
 import Counter from './views/Counter'
+import TodoApp from './views/TodoApp'
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/counter">
             <Counter title="计数器"></Counter>
+          </Route>
+          <Route path="/todo">
+            <TodoApp title="todo app"></TodoApp>
           </Route>
         </Switch>
       </div>
