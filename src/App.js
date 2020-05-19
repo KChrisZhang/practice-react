@@ -1,38 +1,24 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Link,
-  Switch,
-  Route,
-  useRouteMatch,
-  useParams,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import './App.css'
 
-export default function App() {
+import Home from './views/Home'
+import User from './views/User'
+import Login from './views/Login'
+
+function App() {
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/topics">Topics</Link>
-          </li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
-
+      <div className="App">
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route exact path="/">
+            <Home title="首页123"></Home>
           </Route>
-          <Route path="/topics">
-            <Topics />
+          <Route path="/user">
+            <User title="用户456"></User>
           </Route>
-          <Route path="/">
-            <Home />
+          <Route path="/login">
+            <Login title="登录"></Login>
           </Route>
         </Switch>
       </div>
@@ -40,42 +26,4 @@ export default function App() {
   )
 }
 
-function Home() {
-  return <h2>Home</h2>
-}
-
-function About() {
-  return <h2>About</h2>
-}
-
-function Topics() {
-  let match = useRouteMatch()
-
-  return (
-    <div>
-      <h2>Topics</h2>
-      <ul>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-        </li>
-      </ul>
-
-      <Switch>
-        <Route path={`${match.url}/:topicId`}>
-          <Topic />
-        </Route>
-        <Route path={`${match.url}`}>
-          <h3>Please select a topic.</h3>
-        </Route>
-      </Switch>
-    </div>
-  )
-}
-
-function Topic() {
-  let { topicId } = useParams()
-  return <h3>Requested topic ID: {topicId}</h3>
-}
+export default App
