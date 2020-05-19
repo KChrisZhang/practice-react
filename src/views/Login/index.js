@@ -4,7 +4,7 @@ import './index.scss'
 export default class Login extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { isLogin: false }
+    this.state = { isLogin: 'false' }
     this.handleLoginClick = this.handleLoginClick.bind(this)
     this.handleLogoutClick = this.handleLogoutClick.bind(this)
   }
@@ -19,9 +19,11 @@ export default class Login extends React.Component {
     })
   }
   render() {
+    console.log(this.state.isLogin)
     return (
       <div className="Login">
-        <button>Login</button>
+        <button>{this.props.title}</button>
+        <p>{this.state.isLogin}</p>
       </div>
     )
   }

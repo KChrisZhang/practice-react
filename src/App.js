@@ -5,6 +5,7 @@ import './App.css'
 import Home from './views/Home'
 import User from './views/User'
 import Login from './views/Login'
+import Counter from './views/Counter'
 
 function App() {
   return (
@@ -12,13 +13,16 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <Home title="首页123"></Home>
+            <Home title="首页"></Home>
           </Route>
           <Route path="/user">
-            <User title="用户456"></User>
+            <User title="用户"></User>
           </Route>
           <Route path="/login">
             <Login title="登录"></Login>
+          </Route>
+          <Route path="/counter">
+            <Counter title="计数器"></Counter>
           </Route>
         </Switch>
       </div>
