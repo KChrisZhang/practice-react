@@ -11,11 +11,13 @@ import List from './views/List'
 import Detail from './views/Detail'
 import Error from './views/404'
 
-// import { Menu } from 'antd'
-// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons'
-// const { SubMenu } = Menu
+import { Menu } from 'antd'
+const { SubMenu } = Menu
 
 class App extends React.Component {
+  handleClick = e => {
+    console.log('click ', e)
+  }
   render() {
     return (
       <div className="App">
@@ -39,6 +41,50 @@ class App extends React.Component {
             <Link to="/list">列表</Link>
           </li>
         </ul>
+
+        <Menu
+          onClick={this.handleClick}
+          style={{ width: 256 }}
+          defaultSelectedKeys={['1']}
+          defaultOpenKeys={['sub1']}
+          mode="inline"
+        >
+          <SubMenu
+            key="sub1"
+            title={
+              <span>
+                <span>Navigation One</span>
+              </span>
+            }
+          >
+            <Menu.Item key="1">Option 1</Menu.Item>
+            <Menu.Item key="2">Option 2</Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub2"
+            title={
+              <span>
+                <span>Navigation Two</span>
+              </span>
+            }
+          >
+            <Menu.Item key="5">Option 5</Menu.Item>
+            <Menu.Item key="6">Option 6</Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub3"
+            title={
+              <span>
+                <span>Navigation Three</span>
+              </span>
+            }
+          >
+            <Menu.Item key="9">Option 9</Menu.Item>
+            <Menu.Item key="10">Option 10</Menu.Item>
+            <Menu.Item key="11">Option 11</Menu.Item>
+            <Menu.Item key="12">Option 12</Menu.Item>
+          </SubMenu>
+        </Menu>
 
         {/* 一般重定向需要搭配Switch一起使用 */}
         {/* Switch 如果匹配到了路由，就不会再往下匹配了；如果不写Switch，则一直会匹配到404页面 */}
