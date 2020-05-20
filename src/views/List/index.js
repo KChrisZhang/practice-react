@@ -1,5 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+
+const history = createBrowserHistory({
+  forceRefresh: true,
+})
 
 export default class List extends React.Component {
   render() {
@@ -17,6 +22,7 @@ export default class List extends React.Component {
             <Link to="/detail/136">商品136</Link>
           </li>
         </ul>
+        <button onClick={() => history.push('/detail/100')}>第100号商品</button>
       </div>
     )
   }
