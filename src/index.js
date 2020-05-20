@@ -4,9 +4,11 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import * as serviceWorker from './serviceWorker'
 
-import './index.css'
 import App from './App'
 import store from './store'
+
+import 'antd/dist/antd.css'
+import './index.css'
 
 /**
  * Router一定要把App组件包起来，这样其他组件才可以使用路由

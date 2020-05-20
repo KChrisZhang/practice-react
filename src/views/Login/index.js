@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.scss'
+import { Button } from 'antd'
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class Login extends React.Component {
     console.log(this.state.isLogin)
     return (
       <div className="Login">
-        <button>{this.props.title}</button>
+        <Button type="primary">{this.props.title}</Button>
         <p>{this.state.isLogin}</p>
       </div>
     )
