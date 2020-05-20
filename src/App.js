@@ -7,6 +7,8 @@ import User from './views/User'
 import Login from './views/Login'
 import Counter from './views/Counter'
 import TodoApp from './views/TodoApp'
+import List from './views/List'
+import Detail from './views/Detail'
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
         <li>
           <Link to="/todo">todoApp</Link>
         </li>
+        <li>
+          <Link to="/list">列表</Link>
+        </li>
       </ul>
 
       <Switch>
@@ -45,6 +50,8 @@ function App() {
         <Route path="/todo">
           <TodoApp title="todoApp"></TodoApp>
         </Route>
+        <Route path="/list" component={List}></Route>
+        <Route path="/detail/:id" component={Detail}></Route>
       </Switch>
     </div>
   )
