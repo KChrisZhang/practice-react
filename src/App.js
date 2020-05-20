@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import './App.css'
 
 import Home from './views/Home'
@@ -10,27 +10,43 @@ import TodoApp from './views/TodoApp'
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route exact path="/">
-            <Home title="首页"></Home>
-          </Route>
-          <Route path="/user">
-            <User title="用户"></User>
-          </Route>
-          <Route path="/login">
-            <Login title="登录"></Login>
-          </Route>
-          <Route path="/counter">
-            <Counter title="计数器"></Counter>
-          </Route>
-          <Route path="/todo">
-            <TodoApp title="todo app"></TodoApp>
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <div className="App">
+      <ul>
+        <li>
+          <Link to="/">首页</Link>
+        </li>
+        <li>
+          <Link to="/user">用户</Link>
+        </li>
+        <li>
+          <Link to="/login">登录</Link>
+        </li>
+        <li>
+          <Link to="/counter">计数器</Link>
+        </li>
+        <li>
+          <Link to="/todo">todoApp</Link>
+        </li>
+      </ul>
+
+      <Switch>
+        <Route exact path="/">
+          <Home title="首页"></Home>
+        </Route>
+        <Route path="/user">
+          <User title="用户"></User>
+        </Route>
+        <Route path="/login">
+          <Login title="登录"></Login>
+        </Route>
+        <Route path="/counter">
+          <Counter title="计数器"></Counter>
+        </Route>
+        <Route path="/todo">
+          <TodoApp title="todoApp"></TodoApp>
+        </Route>
+      </Switch>
+    </div>
   )
 }
 
