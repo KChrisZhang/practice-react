@@ -23,8 +23,9 @@ export default class Login extends React.Component {
     console.log(this.state.isLogin)
     return (
       <div className="Login">
+        <h3>登录页</h3>
         <Button className="Login-button" type="primary">
-          {this.props.title}
+          登录
         </Button>
         <p>{this.state.isLogin}</p>
       </div>

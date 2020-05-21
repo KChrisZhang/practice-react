@@ -5,7 +5,7 @@ import VisibleTodoList from '../../components/TodoApp/containers/VisibleTodoList
 
 const App = props => (
   <div>
-    <h3>{props['title']}</h3>
+    <h3>todoApp</h3>
     <AddTodo />
     <VisibleTodoList />
     <Footer />

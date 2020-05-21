@@ -7,7 +7,7 @@ import Setting from './Setting'
 export default function User(props) {
   return (
     <div className="User">
-      <h3>{props['title']}</h3>
+      <h3>用户页</h3>
       <p>Hello!</p>
 
       <ul>

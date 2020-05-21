@@ -4,7 +4,7 @@ import './index.scss'
 export default function Home(props) {
   return (
     <div className="Home">
-      <h3>{props['title']}</h3>
+      <h3>首页</h3>
     </div>
   )
 }

@@ -4,7 +4,8 @@ export default class Error extends React.Component {
   render() {
     return (
       <div>
-        <h1>页面飞走了</h1>
+        <h3>错误页</h3>
+        <p>页面飞走了</p>
       </div>
     )
   }

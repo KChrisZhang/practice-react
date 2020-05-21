@@ -33,9 +33,10 @@ class Counter extends React.Component {
 
     return (
       <div>
-        <h3>
-          {this.props.title} {this.props.hello} {this.props.count}
-        </h3>
+        <h3>计数器</h3>
+        <p>
+          {this.props.hello} {this.props.count}
+        </p>
         <div>
           <button onClick={() => increment()}>INCRESE</button>
           <button onClick={() => decrement()}>DECRESE</button>
