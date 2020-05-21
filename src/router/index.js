@@ -9,6 +9,9 @@ const List = React.lazy(() => import('../views/List'))
 const Detail = React.lazy(() => import('../views/Detail'))
 const Error = React.lazy(() => import('../views/404'))
 
+const About = React.lazy(() => import('../views/User/About'))
+const Setting = React.lazy(() => import('../views/User/Setting'))
+
 export default [
   {
     name: 'home',
@@ -20,6 +23,18 @@ export default [
     name: 'user',
     path: '/user',
     component: User,
+    routes: [
+      {
+        name: 'about',
+        path: '/user/about',
+        component: About,
+      },
+      {
+        name: 'setting',
+        path: '/user/setting',
+        component: Setting,
+      },
+    ],
   },
   {
     name: 'login',

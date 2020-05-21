@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { renderRoutes } from 'react-router-config'
 import './index.scss'
-import About from './About'
-import Setting from './Setting'
+// import About from './About'
+// import Setting from './Setting'
 
 export default function User(props) {
   return (
@@ -19,8 +20,10 @@ export default function User(props) {
         </li>
       </ul>
 
-      <Route path="/user/setting" component={Setting}></Route>
-      <Route path="/user/about" component={About}></Route>
+      {renderRoutes(props.route.routes)}
+
+      {/* <Route path="/user/setting" component={Setting}></Route>
+      <Route path="/user/about" component={About}></Route> */}
     </div>
   )
 }
