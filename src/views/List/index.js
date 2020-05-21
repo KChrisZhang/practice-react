@@ -10,7 +10,7 @@ export default class List extends React.Component {
   render() {
     return (
       <div>
-        <h2>列表页</h2>
+        <h3>{this.props.title}</h3>
         <ul>
           <li>
             <Link to="/detail/134">商品134</Link>

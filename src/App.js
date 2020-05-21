@@ -1,22 +1,23 @@
 import React from 'react'
-import { Switch, Route, Link, Redirect } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import './App.css'
+import router from './router'
 
-import Home from './views/Home'
-import User from './views/User'
-import Login from './views/Login'
-import Counter from './views/Counter'
-import TodoApp from './views/TodoApp'
-import List from './views/List'
-import Detail from './views/Detail'
-import Error from './views/404'
+// import Home from './views/Home'
+// import User from './views/User'
+// import Login from './views/Login'
+// import Counter from './views/Counter'
+// import TodoApp from './views/TodoApp'
+// import List from './views/List'
+// import Detail from './views/Detail'
+// import Error from './views/404'
 
 import { Row, Col, Menu } from 'antd'
 const { SubMenu } = Menu
 
 class App extends React.Component {
   handleClick = e => {
-    console.log('click ', e)
+    console.log('Menu[click] ', e.key)
   }
   render() {
     return (
@@ -39,22 +40,22 @@ class App extends React.Component {
                   </span>
                 }
               >
-                <Menu.Item key="1">
+                <Menu.Item key="首页">
                   <Link to="/">首页</Link>
                 </Menu.Item>
-                <Menu.Item key="2">
+                <Menu.Item key="用户">
                   <Link to="/user">用户</Link>
                 </Menu.Item>
-                <Menu.Item key="3">
+                <Menu.Item key="登录">
                   <Link to="/login">登录</Link>
                 </Menu.Item>
-                <Menu.Item key="4">
+                <Menu.Item key="计数器">
                   <Link to="/counter">计数器</Link>
                 </Menu.Item>
-                <Menu.Item key="5">
+                <Menu.Item key="todoApp">
                   <Link to="/todo">todoApp</Link>
                 </Menu.Item>
-                <Menu.Item key="6">
+                <Menu.Item key="列表">
                   <Link to="/list">列表</Link>
                 </Menu.Item>
               </SubMenu>
@@ -65,9 +66,13 @@ class App extends React.Component {
             {/* 一般重定向需要搭配Switch一起使用 */}
             {/* Switch 如果匹配到了路由，就不会再往下匹配了；如果不写Switch，则一直会匹配到404页面 */}
             <Switch>
+              {router.map(route => {
+                return <Route key={route.name} {...route}></Route>
+              })}
+
               {/* 如果访问User页面，则重定向到List页面 */}
               {/* <Redirect from="/user" to="list"></Redirect> */}
-              <Route exact path="/">
+              {/* <Route exact path="/">
                 <Home title="首页"></Home>
               </Route>
               <Route path="/user">
@@ -83,9 +88,9 @@ class App extends React.Component {
                 <TodoApp title="todoApp"></TodoApp>
               </Route>
               <Route path="/list" component={List}></Route>
-              <Route path="/detail/:id" component={Detail}></Route>
+              <Route path="/detail/:id" component={Detail}></Route> */}
               {/* 没有写path表示匹配到所有路径 */}
-              <Route component={Error}></Route>
+              {/* <Route component={Error}></Route> */}
             </Switch>
           </Col>
         </Row>
