@@ -1,5 +1,18 @@
 import React from 'react'
 
+import Home from '../views/Home'
+import User from '../views/User'
+import Login from '../views/Login'
+import Counter from '../views/Counter'
+import TodoApp from '../views/TodoApp'
+import List from '../views/List'
+import Detail from '../views/Detail'
+import Error from '../views/404'
+
+import About from '../views/User/About'
+import Setting from '../views/User/Setting'
+// import Loading from '../components/Loading'
+
 /**
  * 按需加载，页面实现闪屏问题
  */
@@ -14,18 +27,6 @@ import React from 'react'
 
 // const About = React.lazy(() => import('../views/User/About'))
 // const Setting = React.lazy(() => import('../views/User/Setting'))
-
-import Home from '../views/Home'
-import User from '../views/User'
-import Login from '../views/Login'
-import Counter from '../views/Counter'
-import TodoApp from '../views/TodoApp'
-import List from '../views/List'
-import Detail from '../views/Detail'
-import Error from '../views/404'
-
-import About from '../views/User/About'
-import Setting from '../views/User/Setting'
 
 export default [
   {
