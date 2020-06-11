@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
-import { Row, Col, Menu } from 'antd'
+import { Row, Col } from 'antd'
 
 import './App.css'
 import router from './router'
-const { SubMenu } = Menu
+import MenuList from './components/MenuList'
 
 // import Home from './views/Home'
 // import User from './views/User'
@@ -26,41 +25,7 @@ class App extends React.Component {
         <div className="App-header"></div>
         <Row>
           <Col span={6}>
-            <Menu
-              onClick={this.handleClick}
-              style={{ width: 256 }}
-              defaultSelectedKeys={['1']}
-              defaultOpenKeys={['sub1']}
-              mode="inline"
-            >
-              <SubMenu
-                key="sub1"
-                title={
-                  <span>
-                    <span>菜单</span>
-                  </span>
-                }
-              >
-                <Menu.Item key="首页">
-                  <Link to="/">首页</Link>
-                </Menu.Item>
-                <Menu.Item key="用户">
-                  <Link to="/user">用户</Link>
-                </Menu.Item>
-                <Menu.Item key="登录">
-                  <Link to="/login">登录</Link>
-                </Menu.Item>
-                <Menu.Item key="计数器">
-                  <Link to="/counter">计数器</Link>
-                </Menu.Item>
-                <Menu.Item key="todoApp">
-                  <Link to="/todo">todoApp</Link>
-                </Menu.Item>
-                <Menu.Item key="列表">
-                  <Link to="/list">列表</Link>
-                </Menu.Item>
-              </SubMenu>
-            </Menu>
+            <MenuList />
           </Col>
 
           <Col span={18}>
