@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker'
 
 import App from './App'
 import store from './store'
+import './mock'
 
 import 'antd/dist/antd.css'
 import './index.css'

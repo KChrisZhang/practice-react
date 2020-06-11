@@ -5,6 +5,7 @@ import { Row, Col } from 'antd'
 import './App.css'
 import router from './router'
 import MenuList from './components/MenuList'
+import { getList, getUserInfo, getAccountInfo } from './api'
 
 // import Home from './views/Home'
 // import User from './views/User'
@@ -19,7 +20,21 @@ class App extends React.Component {
   handleClick = e => {
     console.log('Menu[click] ', e.key)
   }
+  getList() {
+    getList().then(res => console.log(res, 'list'))
+  }
+  getUserInfo() {
+    getUserInfo().then(res => console.log(res, 'user'))
+  }
+  getAccountInfo() {
+    getAccountInfo().then(res => console.log(res, 'account'))
+  }
+
   render() {
+    this.getList()
+    this.getUserInfo()
+    this.getAccountInfo()
+
     return (
       <div className="App">
         <div className="App-header"></div>
