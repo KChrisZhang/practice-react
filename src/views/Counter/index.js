@@ -38,8 +38,12 @@ class Counter extends React.Component {
           {this.props.hello} {this.props.count}
         </p>
         <div>
-          <button onClick={() => increment()}>INCRESE</button>
-          <button onClick={() => decrement()}>DECRESE</button>
+          <button onClick={() => increment()} style={{ marginRight: 15 + 'px' }}>
+            INCRESE
+          </button>
+          <button onClick={() => decrement()} style={{ marginLeft: 15 + 'px' }}>
+            DECRESE
+          </button>
         </div>
       </div>
     )
