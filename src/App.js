@@ -37,7 +37,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <div className="App-header"></div>
+        <div className="App-header">管理系统</div>
         <Row>
           <Col span={6}>
             <MenuList />

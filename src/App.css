@@ -19,13 +19,19 @@
 .App-header {
   height: 88px;
   background-color: #282c34;
+  padding: 0 30px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 28px;
+  text-align: left;
+  line-height: 86px;
   /* min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white; */
+   */
 }
 
 .App-link {

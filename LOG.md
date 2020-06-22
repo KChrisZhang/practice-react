@@ -14,3 +14,11 @@
    3. 父子组件通信
    4. store
    5. router
+
+
+
+**2020/6/22**
+
+1. prop-types：设置prop参数类型
+2. {connect} 'react-redux'：将store中全局变量和组件建立联系
+
