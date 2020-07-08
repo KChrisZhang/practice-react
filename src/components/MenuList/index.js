@@ -26,11 +26,11 @@ export default class MenuList extends React.Component {
       <Menu
         onClick={this.handleClick}
         style={{ width: 256 }}
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
+        defaultSelectedKeys={['HOME']}
+        defaultOpenKeys={['menu']}
         mode="inline"
       >
-        <SubMenu key="sub1" title={<span>MENU</span>}>
+        <SubMenu key="menu" title={<span>MENU</span>}>
           {this.state.list.map(item => {
             return (
               <Menu.Item key={item['name']}>
